@@ -1,0 +1,16 @@
+{
+  "name": "Dev-Fest-2018",
+  "description": "financial checklist for college students",
+  "scripts": {
+  },
+  "env": {
+  },
+  "formation": {
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+
+  ]
+}
