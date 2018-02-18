@@ -33,7 +33,7 @@ nav {
     display: inline;
     position: relative;
     /* height: 40px; */
-    font-size: 18px;
+
 
 
     left: 10px;
@@ -42,12 +42,14 @@ nav {
 .navbar-brand {
     display: inline;
     color: #ffffff;
+    font-size: 15px;
+    /* font-weight: 700; */
 }
 
 .navbar-box {
     display: inline-block;
 
-    width: 14px;
-    height: 14px;
+    width: 12px;
+    height: 12px;
     background-color: #ffffff;
 }
