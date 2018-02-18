@@ -1,4 +1,54 @@
-<% include ./partials/header %>
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Make site responsive on mobile/tablet -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Finance Checklist for Students</title>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    <link rel='stylesheet' href="/stylesheets/style.css" />
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container">
+
+        <div class="navbar-box"></div>
+
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/">Finance Checklist for Students</a>
+        </div>
+
+        <div id="navbar-date"></div>
+
+        <div class="navbar-logout">
+            <div class="navbar-box"></div>
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Log Out</a>
+            </div>
+        </div>
+
+        <script>
+            var m = new Date();
+            var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            document.getElementById("navbar-date").innerHTML = months[m.getMonth()] + " " + m.getDate() + ", " + m.getFullYear();
+        </script>
+
+    </div>
+</nav>
+
+<div class="container">
+    <!--<%if(0) {%>-->
+    <!--<div class="alert alert-danger" role="alert">-->
+        <!--<%=error%>-->
+    <!--</div>-->
+    <!--<%}%>-->
+    <!--<%if(1) {%>-->
+    <!--<div class="alert alert-success" role="alert">-->
+        <!--<%%>-->
+    <!--</div>-->
+    <%}%>
+</div>
+
+
 <link rel='stylesheet' href="/stylesheets/index.css" />
 <link rel='stylesheet' href="/stylesheets/show.css" />
 

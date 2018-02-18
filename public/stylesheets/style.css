@@ -71,12 +71,20 @@ nav {
 
 
 #navbar-date {
-    display: inline;
+    display: inline-block;
     position: absolute;
-    right: 20px;
+    right: 110px;
 
     color: #ffffff;
 
+}
+
+.navbar-logout {
+    display: inline-block;
+    position: absolute;
+    right: 30px;
+
+    color: #ffffff;
 }
 
 .box {
