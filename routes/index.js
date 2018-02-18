@@ -45,9 +45,9 @@ router.get("/login", function(req, res){
 // handling login logic
 router.post("/login", passport.authenticate("local",
     {
-        successRedirect: "/personal",
         failureRedirect: "/login"
     }), function(req, res){
+    res.redirect('/'+req.user._id);
 });
 
 // logic route
@@ -57,14 +57,30 @@ router.get("/logout", function(req, res){
     res.redirect("/");
 });
 
-router.get("/personal", function(req, res){
-    User.find({ username: 'Sterling' },function(err, user) {
-        if (err) throw err;
-        console.log(user[0].username)
-        // object of the user
-        console.log(user);
-        res.render("personal", {page: 'personal', name: user[0].username});
-    });
+router.get("/:id", function(req, res){
+    // User.find({ username: 'Sterling' },function(err, user) {
+    //     if (err) throw err;
+    //     console.log(user[0].username)
+    //     // object of the user
+    //     console.log(user);
+    //     res.render("show", {name: user[0].username});
+    // });
+
+    if(mongoose.Types.ObjectId.isValid(req.user._id)) {
+        User.findById(req.user._id).exec(function(err, foundUser){
+            if(err){
+                console.log(err);
+            } else {
+                console.log(foundUser);
+                //render show template with that campground
+                res.render("show", {user: foundUser});
+            }
+        });
+    }
+    else {
+        console.log('haha');
+    }
+
 
 });
 
