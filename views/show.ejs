@@ -1,11 +1,79 @@
 <% include ./partials/header %>
+<link rel='stylesheet' href="/stylesheets/index.css" />
+<link rel='stylesheet' href="/stylesheets/show.css" />
 
-<div class="row">
-    <h1 style="text-align: center">Hello</h1>
-    <div style="width: 30%; margin: 25px auto;">
-        <%=user%>
+    <div class="usr">
+        <div class="usr-wrapper">
+            <!-- <%=user.username%> -->
+            <div class="usr-header"> <%=user.firstName%>'s <br> Budget <br> List </div>
+            <div class="usr-bul-wrapper">
+                <div class="usr-bul-main">
+                     <img src="/images/sign1.png" id="usr-main1">
+                     Weekly Budget Goals
+                </div>
+                <div id="usr-bul-sub1">
+                    <!-- <img src="/images/sign2.png" id="pub-sub"> -->
+                    Food & Drink <br>
+                    <!-- <img src="/images/sign2.png" id="pub-sub"> -->
+                    Leisure <br>
+                    Health <br>
+                    Education <br>
+                    Sports <br>
+                    Transportation <br>
+                </div>
+            </div>
+
+            <div class="usr-bul-wrapper">
+                <div class="usr-bul-main">
+                     <img src="/images/sign1.png" id="usr-main2" style="transform:rotate(-90deg);">
+                     Monthly Spending
+                </div>
+                <div id="usr-bul-sub2">
+                </div>
+            </div>
+
+            <div class="usr-bul-wrapper">
+                <div class="usr-bul-main">
+                     <img src="/images/sign1.png" id="usr-main2" style="transform:rotate(-90deg);">
+                     Stock Information
+                </div>
+                <div id="usr-bul-sub2">
+                </div>
+            </div>
+
+        </div>
     </div>
-</div>
 
+    <div class="pub">
+        <div class="pub-wrapper">
+            <div class="pub-header"> Income <br> Suggestion </div>
+
+            <div class="pub-bul-wrapper">
+                <div class="pub-bul-main">
+                     <img src="/images/sign1.png" id="pub-main1">
+                     Job Opportunities
+                </div>
+                <div id="pub-bul-sub1">
+                    <!-- <img src="/images/sign2.png" id="pub-sub"> -->
+                    Part-time Job <br>
+                    <!-- <img src="/images/sign2.png" id="pub-sub"> -->
+                    Internship Opportunity
+                </div>
+            </div>
+
+            <div class="pub-bul-wrapper">
+                <div class="pub-bul-main">
+                    <img src="/images/sign1.png" id="pub-main2">
+                    Scholarship Opportunities
+                </div>
+                <div id="pub-bul-sub2">
+                    <!-- <img src="/images/sign2.png" id="pub-sub"> -->
+                    Major best-match <br>
+                    <!-- <img src="/images/sign2.png" id="pub-sub"> -->
+                    Deadline approach
+                </div>
+            </div>
+        </div>
+    </div>
 
 <% include ./partials/footer %>

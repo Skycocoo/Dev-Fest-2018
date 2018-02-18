@@ -1,0 +1,47 @@
+.usr-bul-wrapper {
+    position: relative;
+    display: block;
+    margin-top: 20px;
+    margin-left: 120px;
+
+    line-height: 40px;
+}
+
+.usr-bul-main {
+    color: #00394f;
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+
+#usr-main1, #usr-main2 {
+    display: inline;
+    /* position: fixed; */
+    max-width: 14px;
+    max-height: 14px;
+
+    padding: 3px;
+    margin-right: 2px;
+}
+
+#usr-main1.rot, #usr-main2.rot {
+    -moz-transition: all 0.1s linear;
+    -webkit-transition: all 0.1s linear;
+    transition: all 0.1s linear;
+
+    -moz-transform:rotate(-90deg);
+    -webkit-transform:rotate(-90deg);
+    transform:rotate(-90deg);
+
+}
+
+#usr-bul-sub1, #usr-bul-sub2 {
+    color: #0076a3;
+    font-size: 18px;
+
+    margin-left: 60px;
+    line-height: 40px;
+}
+
+#usr-bul-sub1.active, #usr-bul-sub2.active {
+    display: none;
+}
