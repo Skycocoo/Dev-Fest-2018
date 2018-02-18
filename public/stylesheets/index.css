@@ -1,10 +1,11 @@
 .usr {
-    position: fixed;
+    /* position: fixed; */
+    position: absolute;
     display: block;
     /* left: 0; */
-    top: 40px;
+    top: 50px;
 
-    width: 40%;
+    width: 45%;
     height: 100%;
 
     /* background-color: #eeeeee; */
@@ -12,7 +13,7 @@
 }
 
 .usr-wrapper {
-    text-align: center;
+    /* text-align: center; */
     width: 100%;
     height: 100%;
 
@@ -21,8 +22,8 @@
 .usr-header {
     position: relative;
     display: inline-block;
-    margin-top: 200px;
-    /* margin-left: 20px; */
+    margin-top: 50px;
+    margin-left: 50px;
 
     color: #00394f;
     font-size: 40px;
@@ -33,60 +34,71 @@
 
 }
 
+
 .usr-login-wrapper {
     position: relative;
-    text-align: left;
-    left: -40px;
+    display: block;
+    margin-top: 150px;
+
+    text-align: center;
 }
 
 .usr-login {
     position: relative;
     display: block;
-    margin-top: 40px;
 }
 
-.usr-login a {
-    color: #0076a3;
-    font-size: 25px;
-    line-height: 30px;
-}
 
 .usr-login li {
     margin: 20px auto 20px auto;
     display: block;
-    width: 100px;
-    height: 30px;
 
+    background-color: #00648a;
+    /* align-items: center; */
+    /* text-align: center; */
+    width: 60%;
+    line-height: 32px;
+    border-radius: 5px;
     /* box-shadow: 0px 0px 5px #0076a7; */
 
 }
 
+.usr-login li a {
+    color: #ffffff;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
 
 .pub {
-    position: fixed;
+    /* position: fixed; */
+    position: absolute;
     display: block;
     /* left: 0; */
-    top: 50px;
+    /* top: 50px; */
     right: 0;
 
-    background-color: #f4f4f4;
+    background-color: #fbfbfb;
 
-    width: 60%;
+    width: 55%;
     height: 100%;
 }
 
 
 .pub-wrapper {
-    text-align: center;
     width: 100%;
     height: 100%;
+
 
 }
 
 .pub-header {
     position: relative;
     display: inline-block;
-    margin-top: 200px;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-bottom: 70px;
+
     /* margin-left: 20px; */
 
     color: #00394f;
@@ -96,4 +108,60 @@
 
     line-height: 50px;
 
+}
+
+.pub-bul-wrapper {
+    position: relative;
+    display: block;
+    margin-top: 20px;
+    margin-left: 150px;
+
+    line-height: 40px;
+}
+
+.pub-bul-main {
+    color: #00394f;
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+
+#pub-main1, #pub-main2 {
+    display: inline;
+    /* position: fixed; */
+    max-width: 14px;
+    max-height: 14px;
+
+    padding: 3px;
+    margin-right: 2px;
+}
+
+#pub-main1.rot, #pub-main2.rot {
+    -moz-transition: all 0.1s linear;
+    -webkit-transition: all 0.1s linear;
+    transition: all 0.1s linear;
+
+    -moz-transform:rotate(-90deg);
+    -webkit-transform:rotate(-90deg);
+    transform:rotate(-90deg);
+
+}
+
+#pub-bul-sub1, #pub-bul-sub2 {
+    color: #0076a3;
+    font-size: 18px;
+
+    margin-left: 80px;
+    line-height: 40px;
+}
+
+#pub-bul-sub1.active, #pub-bul-sub2.active {
+    display: none;
+}
+
+
+#pub-sub {
+    display: inline;
+    /* position: fixed; */
+    max-width: 16px;
+    max-height: 16px;
 }
