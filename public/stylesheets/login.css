@@ -36,17 +36,33 @@
     border-radius: 5px;
 }
 
+#back {
+    /* display: inline-block; */
+    background-color: #ffffff;
+
+    color: #00648a;
+    border: none;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: thin;
+
+    padding: 8px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+}
 
 button {
-    background-color: #00648a; /* Green */
+    /* display: inline-block; */
+    background-color: #00648a;
 
     color: #ffffff;
     border: none;
     border-radius: 5px;
 
+    margin-left: 20px;
     padding: 8px 30px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     font-size: 16px;
 }
