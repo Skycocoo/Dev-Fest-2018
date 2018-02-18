@@ -14,25 +14,19 @@
         <div class="navbar-box"></div>
 
         <div class="navbar-header">
-            <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button> -->
             <a class="navbar-brand" href="/">Finance Checklist for Students</a>
         </div>
-        <div id="navbar" class="collapse navbar-collapse">
-            <!--<ul class="nav navbar-nav">-->
-                <!--<li class="<%= typeof page !== 'undefined' && page === 'campgrounds' ? 'active' : '' %>"><a href="/campgrounds">Home</a></li>-->
-            <!--</ul>-->
-            <ul class="nav navbar-nav navbar-right">
 
-            </ul>
-        </div>
+        <div id="navbar-date"></div>
+
+        <script>
+            var m = new Date();
+            var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            document.getElementById("navbar-date").innerHTML = months[m.getMonth()] + " " + m.getDate() + ", " + m.getFullYear();
+        </script>
+
     </div>
 </nav>
-
 
 <div class="container">
     <%if(0) {%>
