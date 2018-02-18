@@ -13,7 +13,7 @@
     letter-spacing: 1px;
 }
 
-#usr-main1, #usr-main2 {
+#usr-main1, #usr-main2, #usr-main3 {
     display: inline;
     /* position: fixed; */
     max-width: 14px;
@@ -23,7 +23,7 @@
     margin-right: 2px;
 }
 
-#usr-main1.rot, #usr-main2.rot {
+#usr-main1.rot, #usr-main2.rot, #usr-main3.rot {
     -moz-transition: all 0.1s linear;
     -webkit-transition: all 0.1s linear;
     transition: all 0.1s linear;
@@ -34,14 +34,59 @@
 
 }
 
-#usr-bul-sub1, #usr-bul-sub2 {
+#usr-bul-sub1, #usr-bul-sub2, #usr-bul-sub3 {
     color: #0076a3;
     font-size: 18px;
 
-    margin-left: 60px;
+    margin-left: 40px;
     line-height: 40px;
 }
 
-#usr-bul-sub1.active, #usr-bul-sub2.active {
+#usr-bul-sub1.active, #usr-bul-sub2.active, #usr-bul-sub3.active {
     display: none;
+}
+
+.monthly {
+    width: 40%;
+    display: block;
+    position: relative;
+}
+
+.item {
+    width: 100%;
+    position: relative;
+    display: block;
+    height: 50px;
+}
+
+.name {
+    color: #0076a3;
+    font-size: 15px;
+}
+
+.progress {
+    position: absolute;
+    display: inline-block;
+    top: 15px;
+    right: -100px;
+    /* margin-left: 15px; */
+
+    width: 100%;
+    height: 5px;
+    background-color: #eeeeee;
+}
+
+.bar {
+    position: absolute;
+    display: inline-block;
+    /* top: 10px; */
+
+
+    height: 5px;
+    background-color: #fff353;
+}
+
+.item a {
+    color: #0076a3;
+    font-size: 10px;
 }
