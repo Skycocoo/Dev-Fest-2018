@@ -10,6 +10,24 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+.left {
+  width: 30%;
+  //background-color: orangered;
+  //boarder-style: dotted;
+  border: 1px solid blue;
+  float:left;
+  margin: 1.66%;
+}
+
+.right {
+  width: 63%;
+  height: 90%;
+  //background-color: yellowgreen;
+  //boarder-style: dotted;
+  border: 1px solid blue;
+  float:right;
+  margin: 1.66%;
+}
 a {
   color: #000000;
   text-decoration: none;
@@ -59,4 +77,8 @@ nav {
 
     color: #ffffff;
 
+}
+
+.box {
+  height: 500px;
 }
