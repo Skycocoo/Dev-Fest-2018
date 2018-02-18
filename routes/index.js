@@ -24,6 +24,7 @@ router.post("/register", function(req, res){
                             firstName: req.body.firstName,
                             lastName: req.body.lastName,
                             budget: req.body.budget});
+
     User.register(newUser, req.body.password, function(err, user){
         if(err){
             console.log(err);
@@ -34,21 +35,13 @@ router.post("/register", function(req, res){
             res.redirect("/");
         });
     });
-    // var data = new User({username: req.body.username, password: req.body.password});
-    //
-    // data.save(function (err, data) {
-    //     console.log(data);
-    //     console.log(data.username + " has " + data.password);
-    //     //req.flash("success", "Welcome " + data.username + "!");
-    //     res.redirect("/");
-    // });
 });
 
 // show login form
 router.get("/login", function(req, res){
     res.render("login", {page: 'login'});
 });
-// handling login logic
+
 // handling login logic
 router.post("/login", passport.authenticate("local",
     {
@@ -64,9 +57,17 @@ router.get("/logout", function(req, res){
     res.redirect("/");
 });
 
-router.get("/personal", function(req, res, user){
-    console.log(user);
+router.get("/personal", function(req, res){
+    User.find({ username: 'Sterling' },function(err, user) {
+        if (err) throw err;
+        console.log(user[0].username)
+        // object of the user
+        console.log(user);
+        res.render("personal", {page: 'personal', name: user[0].username});
+    });
+
 });
+
 
 function isLoggedIn(req, res, next){
     if(req.isAuthenticated()){
