@@ -5,7 +5,7 @@ var passport = require('passport');
 var User   = require('../models/user');
 var mongoose = require("mongoose");
 mongoose.Promise = global.Promise;
-mongoose.connect("mongodb:cozyrat:Cozyrat0326//@ds239988.mlab.com:39988/budget_list");
+mongoose.connect("mongodb://cozyrat:Cozyrat0326@ds239988.mlab.com:39988/budget_list");
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Financial App' });
