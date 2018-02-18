@@ -1,14 +1,14 @@
 var express = require('express');
 var router = express.Router();
-
+require('dotenv').config();
 var passport = require('passport');
 var User   = require('../models/user');
 var mongoose = require("mongoose");
 mongoose.Promise = global.Promise;
-mongoose.connect("mongodb://localhost:27017/finance");
+mongoose.connect("mongodb://{process.env.USER}:{process.env.PASSWORD}@ds239988.mlab.com:39988/budget_list");
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'First App 1' });
+  res.render('index', { title: 'Financial App' });
 });
 
 //AUTH Routes
@@ -65,14 +65,6 @@ router.get("/logout", function(req, res){
 });
 
 router.get("/:id", function(req, res){
-    // User.find({ username: 'Sterling' },function(err, user) {
-    //     if (err) throw err;
-    //     console.log(user[0].username)
-    //     // object of the user
-    //     console.log(user);
-    //     res.render("show", {name: user[0].username});
-    // });
-
     if(mongoose.Types.ObjectId.isValid(req.user._id)) {
         User.findById(req.user._id).exec(function(err, foundUser){
             if(err){
@@ -85,10 +77,8 @@ router.get("/:id", function(req, res){
         });
     }
     else {
-        console.log('haha');
+        console.log('error');
     }
-
-
 });
 
 
