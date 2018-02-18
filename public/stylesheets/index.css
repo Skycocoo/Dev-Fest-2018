@@ -1,10 +1,11 @@
 .usr {
-    position: fixed;
+    /* position: fixed; */
+    position: absolute;
     display: block;
     /* left: 0; */
-    top: 40px;
+    top: 50px;
 
-    width: 50%;
+    width: 45%;
     height: 100%;
 
     /* background-color: #eeeeee; */
@@ -32,6 +33,7 @@
     line-height: 50px;
 
 }
+
 
 .usr-login-wrapper {
     position: relative;
@@ -69,15 +71,16 @@
 
 
 .pub {
-    position: fixed;
+    /* position: fixed; */
+    position: absolute;
     display: block;
     /* left: 0; */
-    top: 50px;
+    /* top: 50px; */
     right: 0;
 
     background-color: #fbfbfb;
 
-    width: 50%;
+    width: 55%;
     height: 100%;
 }
 
