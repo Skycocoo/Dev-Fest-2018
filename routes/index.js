@@ -20,7 +20,10 @@ router.get("/register", function(req, res){
 //handle sign up logic
 router.post("/register", function(req, res){
     console.log(req.body);
-    var newUser = new User({username: req.body.username});
+    var newUser = new User({username: req.body.username,
+                            firstName: req.body.firstName,
+                            lastName: req.body.lastName,
+                            budget: req.body.budget});
     User.register(newUser, req.body.password, function(err, user){
         if(err){
             console.log(err);
@@ -49,7 +52,7 @@ router.get("/login", function(req, res){
 // handling login logic
 router.post("/login", passport.authenticate("local",
     {
-        successRedirect: "/user",
+        successRedirect: "/personal",
         failureRedirect: "/login"
     }), function(req, res){
 });
@@ -57,8 +60,12 @@ router.post("/login", passport.authenticate("local",
 // logic route
 router.get("/logout", function(req, res){
     req.logout();
-    req.flash("success", "Logged You Out!");
-    res.redirect("/personal");
+    //req.flash("success", "Logged You Out!");
+    res.redirect("/");
+});
+
+router.get("/personal", function(req, res, user){
+    console.log(user);
 });
 
 function isLoggedIn(req, res, next){
