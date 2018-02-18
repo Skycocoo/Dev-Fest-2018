@@ -5,7 +5,8 @@ var passport = require('passport');
 var User   = require('../models/user');
 var mongoose = require("mongoose");
 mongoose.Promise = global.Promise;
-mongoose.connect("mongodb://{process.env.USER}:{process.env.PASSWORD}@ds239988.mlab.com:39988/budget_list");
+mongoose.connect("mongodb://"+process.env.USER1+":"+process.env.PASSWORD+"@ds239988.mlab.com:39988/budget_list");
+console.log("mongodb://"+process.env.USER1+":"+process.env.PASSWORD+"@ds239988.mlab.com:39988/budget_list");
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Financial App' });
@@ -19,7 +20,7 @@ router.get("/register", function(req, res){
 
 //handle sign up logic
 router.post("/register", function(req, res){
-    console.log(req.body);
+    //console.log(req.body);
     var newUser = new User({username: req.body.username,
                             firstName: req.body.firstName,
                             lastName: req.body.lastName,
