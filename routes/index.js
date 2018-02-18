@@ -37,7 +37,7 @@ router.post("/register", function(req, res){
         console.log(data);
         console.log(data.username + " has " + data.password);
         //req.flash("success", "Welcome " + data.username + "!");
-        res.redirect("/");
+        res.redirect("/personal");
     });
 });
 
@@ -60,6 +60,18 @@ router.get("/logout", function(req, res){
     req.flash("success", "Logged You Out!");
     res.redirect("/personal");
 });
+
+router.get("/personal", function(req, res){
+    User.find({ username: 'Sterling' },function(err, user) {
+        if (err) throw err;
+        console.log(user[0].username)
+        // object of the user
+        console.log(user);
+        res.render("personal", {page: 'personal', name: user[0].username});
+    });
+
+});
+
 
 function isLoggedIn(req, res, next){
     if(req.isAuthenticated()){
