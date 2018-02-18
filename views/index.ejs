@@ -1,3 +1,37 @@
 <% include ./partials/header %>
-    <p>Welcome to <%= title %></p>
+<link rel='stylesheet' href="/stylesheets/index.css" />
+
+    <div class="usr">
+        <div class="usr-wrapper">
+
+            <div class="usr-header"> Personal <br> Budget <br> List </div>
+
+            <div class="usr-login-wrapper">
+                <div class="usr-login">
+                    <% if(1){ %>
+                    <li class="<%= typeof page !== 'undefined' && page === 'login' ? 'active' : '' %>">
+                        <a href="/login">Sign In</a>
+                    </li>
+                    <li class="<%= typeof page !== 'undefined' && page === 'register' ? 'active' : '' %>">
+                        <a href="/register">Sign Up</a>
+                    </li>
+
+                    <% } else { %>
+                    <li><a href="#">Signed In As <%=  %></a></li>
+                    <li><a href="/logout">Logout</a></li>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pub">
+        <div class="pub-wrapper">
+            <div class="pub-header"> Suggestion <br> for Income </div>
+
+
+
+        </div>
+    </div>
+
 <% include ./partials/footer %>

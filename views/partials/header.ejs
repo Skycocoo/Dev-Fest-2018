@@ -3,39 +3,31 @@
 <head>
     <!-- Make site responsive on mobile/tablet -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Financial</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Finance Checklist for Students</title>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
     <link rel='stylesheet' href="/stylesheets/style.css" />
 </head>
 <body>
 <nav class="navbar navbar-default">
     <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
 
-            <a class="navbar-brand" href="/">Finance App</a>
+        <div class="navbar-box"></div>
+
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/">Finance Checklist for Students</a>
         </div>
-        <div id="navbar" class="collapse navbar-collapse">
-            <!--<ul class="nav navbar-nav">-->
-                <!--<li class="<%= typeof page !== 'undefined' && page === 'campgrounds' ? 'active' : '' %>"><a href="/campgrounds">Home</a></li>-->
-            <!--</ul>-->
-            <ul class="nav navbar-nav navbar-right">
-                <% if(1){ %>
-                <li class="<%= typeof page !== 'undefined' && page === 'login' ? 'active' : '' %>"><a href="/login">Login</a></li>
-                <li class="<%= typeof page !== 'undefined' && page === 'register' ? 'active' : '' %>"><a href="/register">Sign Up</a></li>
-                <% } else { %>
-                <li><a href="#">Signed In As <%=  %></a></li>
-                <li><a href="/logout">Logout</a></li>
-                <% } %>
-            </ul>
-        </div>
+
+        <div id="navbar-date"></div>
+
+        <script>
+            var m = new Date();
+            var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            document.getElementById("navbar-date").innerHTML = months[m.getMonth()] + " " + m.getDate() + ", " + m.getFullYear();
+        </script>
+
     </div>
 </nav>
+
 <div class="container">
     <!--<%if(0) {%>-->
     <!--<div class="alert alert-danger" role="alert">-->
@@ -48,4 +40,3 @@
     <!--</div>-->
     <%}%>
 </div>
-<div class="container">
