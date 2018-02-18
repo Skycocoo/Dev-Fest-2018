@@ -166,3 +166,16 @@
     max-width: 16px;
     max-height: 16px;
 }
+
+#pub-bul-ss {
+    display: block;
+    position: relative;
+    font-size: 15px;
+    color: #a35500;
+    margin-left: 50px;
+}
+
+.pub-detail {
+    color: #0076a3;
+    font-size: 18px;
+}
