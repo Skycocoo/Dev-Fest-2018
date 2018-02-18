@@ -20,6 +20,26 @@ router.get("/register", function(req, res){
 //handle sign up logic
 router.post("/register", function(req, res){
     console.log(req.body);
+<<<<<<< HEAD
+    // var newUser = new User({username: req.body.username});
+    // newUser.save(newUser, req.body.password, function(err, user){
+    //     if(err){
+    //         console.log(err);
+    //         return res.render("register", {error: err.message});
+    //     }
+    //     passport.authenticate("local")(req, res, function(){
+    //         req.flash("success", "Welcome " + user.username + "!");
+    //         res.redirect("/");
+    //     });
+    // });
+    var data = new User({username: req.body.username, password: req.body.password});
+
+    data.save(function (err, data) {
+        console.log(data);
+        console.log(data.username + " has " + data.password);
+        //req.flash("success", "Welcome " + data.username + "!");
+        res.redirect("/personal");
+=======
     var newUser = new User({username: req.body.username});
     User.register(newUser, req.body.password, function(err, user){
         if(err){
@@ -30,6 +50,7 @@ router.post("/register", function(req, res){
             //req.flash("success", "Welcome " + user.username + "!");
             res.redirect("/");
         });
+>>>>>>> 38f001c40ef95ab40e7c41d99fa4945e2dd4cf7b
     });
     // var data = new User({username: req.body.username, password: req.body.password});
     //
@@ -60,6 +81,18 @@ router.get("/logout", function(req, res){
     req.flash("success", "Logged You Out!");
     res.redirect("/personal");
 });
+
+router.get("/personal", function(req, res){
+    User.find({ username: 'Sterling' },function(err, user) {
+        if (err) throw err;
+        console.log(user[0].username)
+        // object of the user
+        console.log(user);
+        res.render("personal", {page: 'personal', name: user[0].username});
+    });
+
+});
+
 
 function isLoggedIn(req, res, next){
     if(req.isAuthenticated()){
