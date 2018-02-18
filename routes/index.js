@@ -23,7 +23,14 @@ router.post("/register", function(req, res){
     var newUser = new User({username: req.body.username,
                             firstName: req.body.firstName,
                             lastName: req.body.lastName,
-                            budget: req.body.budget});
+                            budget: req.body.budget,
+                            Food: req.body.food,
+                            Leisure: req.body.Leisure,
+                            Health: req.body.Health,
+                            Education: req.body.Education,
+                            Sports: req.body.Sports,
+                            Transportation: req.body.Transportation
+    });
 
     User.register(newUser, req.body.password, function(err, user){
         if(err){

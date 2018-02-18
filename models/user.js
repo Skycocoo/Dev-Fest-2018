@@ -7,7 +7,13 @@ var userSchema = new mongoose.Schema({
     password: String,
     firstName: String,
     lastName: String,
-    budget: Number
+    budget: Number,
+    food: Number,
+    Leisure: Number,
+    Health: Number,
+    Education: Number,
+    Sports: Number,
+    Transportation: Number
 });
 userSchema.plugin(passportLocalMongoose);
 var User = mongoose.model("User", userSchema);
