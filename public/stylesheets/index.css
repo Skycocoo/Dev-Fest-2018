@@ -36,7 +36,7 @@
 .usr-login-wrapper {
     position: relative;
     display: block;
-    margin-top: 120px;
+    margin-top: 150px;
 
     text-align: center;
 }
@@ -44,9 +44,7 @@
 .usr-login {
     position: relative;
     display: block;
-    margin-top: 40px;
 }
-
 
 
 .usr-login li {
@@ -77,7 +75,7 @@
     top: 50px;
     right: 0;
 
-    background-color: #f4f4f4;
+    background-color: #fbfbfb;
 
     width: 60%;
     height: 100%;
@@ -85,9 +83,9 @@
 
 
 .pub-wrapper {
-    /* text-align: center; */
     width: 100%;
     height: 100%;
+
 
 }
 
@@ -106,4 +104,57 @@
 
     line-height: 50px;
 
+}
+
+.pub-bul-wrapper {
+    position: relative;
+    display: block;
+    margin-top: 70px;
+    margin-left: 120px;
+
+    line-height: 40px;
+}
+
+.pub-bul-main {
+    color: #00394f;
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+
+#pub-main1, #pub-main2 {
+    display: inline;
+    /* position: fixed; */
+    max-width: 14px;
+    max-height: 14px;
+}
+
+#pub-main1.rot, #pub-main2.rot {
+    -moz-transition: all 0.1s linear;
+    -webkit-transition: all 0.1s linear;
+    transition: all 0.1s linear;
+
+    -moz-transform:rotate(-90deg);
+    -webkit-transform:rotate(-90deg);
+    transform:rotate(-90deg);
+
+}
+
+#pub-bul-sub1, #pub-bul-sub2 {
+    color: #0076a3;
+    font-size: 18px;
+
+    margin-left: 80px;
+    line-height: 35px;
+}
+
+#pub-bul-sub1.active, #pub-bul-sub2.active {
+    display: none;
+}
+
+
+#pub-sub {
+    display: inline;
+    /* position: fixed; */
+    max-width: 16px;
+    max-height: 16px;
 }
