@@ -1,9 +1,18 @@
 # Dev-Fest-2018
 
 ## Description
+
 This project is for Columbia Dev Fest 2018, a web application is based on the MEN (MongoDB, Express, NodeJS) stack with RESTful API design. 
 
 Additionally, the front end uses JQuery to manipulate DOM elements. The back end uses Passport JS for user authentication and authorization. 
+
+## Usage 
+
+This application is aimed to support students to schedule their financial budgets. 
+
+One of the two major parts is the Personal Financial Budget List, which would up the user's progress of their monthly budget, which would take the data directly from their linked credit/debit cards.
+
+The other is the Income Suggestion part, which would suggest users with selected opportunities of incoming, including Scholarships and Job Opportunities that coule be easily applied by students.
 
 ## Installation
 
@@ -17,5 +26,5 @@ To see the application in a hosted server, go to `https://financedevs.herokuapp.
 
 
 
-### Credits
+## Credits
 Yuxi Luo, Yuhong Zhang, Chenghao Zheng, Yuanchen Lu
