@@ -5,7 +5,7 @@ var passport = require('passport');
 var User   = require('../models/user');
 var mongoose = require("mongoose");
 mongoose.Promise = global.Promise;
-mongoose.connect("mongodb://localhost:27017/localhost");
+mongoose.connect("mongodb://localhost:27017/finance");
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'First App 1' });
@@ -20,25 +20,25 @@ router.get("/register", function(req, res){
 //handle sign up logic
 router.post("/register", function(req, res){
     console.log(req.body);
-    // var newUser = new User({username: req.body.username});
-    // newUser.save(newUser, req.body.password, function(err, user){
-    //     if(err){
-    //         console.log(err);
-    //         return res.render("register", {error: err.message});
-    //     }
-    //     passport.authenticate("local")(req, res, function(){
-    //         req.flash("success", "Welcome " + user.username + "!");
-    //         res.redirect("/");
-    //     });
-    // });
-    var data = new User({username: req.body.username, password: req.body.password});
-
-    data.save(function (err, data) {
-        console.log(data);
-        console.log(data.username + " has " + data.password);
-        //req.flash("success", "Welcome " + data.username + "!");
-        res.redirect("/");
+    var newUser = new User({username: req.body.username});
+    User.register(newUser, req.body.password, function(err, user){
+        if(err){
+            console.log(err);
+            return res.render("register", {error: err.message});
+        }
+        passport.authenticate("local")(req, res, function(){
+            //req.flash("success", "Welcome " + user.username + "!");
+            res.redirect("/");
+        });
     });
+    // var data = new User({username: req.body.username, password: req.body.password});
+    //
+    // data.save(function (err, data) {
+    //     console.log(data);
+    //     console.log(data.username + " has " + data.password);
+    //     //req.flash("success", "Welcome " + data.username + "!");
+    //     res.redirect("/");
+    // });
 });
 
 // show login form
@@ -46,12 +46,12 @@ router.get("/login", function(req, res){
     res.render("login", {page: 'login'});
 });
 // handling login logic
+// handling login logic
 router.post("/login", passport.authenticate("local",
     {
-        successRedirect: "/page",
+        successRedirect: "/user",
         failureRedirect: "/login"
     }), function(req, res){
-    console.log(req.body);
 });
 
 // logic route
