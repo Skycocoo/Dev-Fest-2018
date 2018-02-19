@@ -27,16 +27,20 @@ To see the application in a hosted server, go to `https://financialapplication.h
 ## Demo
 
 Default Page:
+
 ![alt text](https://raw.githubusercontent.com/Skycocoo/Financial-Budget-List/master/public/images/demo1.png "demo1")
 
 Login Page:
-![alt text](https://raw.githubusercontent.com/Skycocoo/Financial-Budget-List/master/public/images/demo1.png "demo2")
+
+![alt text](https://raw.githubusercontent.com/Skycocoo/Financial-Budget-List/master/public/images/demo2.png "demo2")
 
 Signup Page:
-![alt text](https://raw.githubusercontent.com/Skycocoo/Financial-Budget-List/master/public/images/demo1.png "demo3")
+
+![alt text](https://raw.githubusercontent.com/Skycocoo/Financial-Budget-List/master/public/images/demo3.png "demo3")
 
 Personal Page:
-![alt text](https://raw.githubusercontent.com/Skycocoo/Financial-Budget-List/master/public/images/demo1.png "demo4")
+
+![alt text](https://raw.githubusercontent.com/Skycocoo/Financial-Budget-List/master/public/images/demo4.png "demo4")
 
 
 ## Credits
